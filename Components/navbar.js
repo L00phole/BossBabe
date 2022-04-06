@@ -1,7 +1,6 @@
 import React from 'react'
 
 
-
 export default function Navbar() {
   return (
     <div>
@@ -11,7 +10,7 @@ export default function Navbar() {
             <div className="flex items items-center mx-20 justify-betweeen w-full">
               <div className="flex justify-center items-center flex-shrink-0">
                 <h1 className="font-bold text-xl cursor-pointer">
-                  BOSS<span className="text-blue-500">BABE</span>
+                  BOSS<span className="text-yellow-500">BABE</span>
 
                   </h1>
               </div>
