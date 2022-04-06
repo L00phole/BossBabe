@@ -6,15 +6,16 @@ const Footer = () => {
   return (
     <>
   
-      <div className='grid gap-10 md:grid-cols-2 contain section bg-slate-400'>
+      <div className='grid gap-10 mb-5'>
         <div className='text-center '>
-            <h2>
-            BOSSBABE
-            </h2> <br />
-            <p>Work it like a queen</p>
+            <h1 className="font-bold text-xl cursor-pointer">
+                  BOSS<span className="text-yellow-400">BABE</span>
+
+                  </h1> <br />
+            <p className="font-bold text-l">Work it like a queen</p>
             </div>
         </div>
-          <div className="decoration-transparent">
+          <div className="font-bold text-l mb-0 text-center ">
         <a
           href="https://jennie-michele.0.capacedev.se/"
           target="_blank"

@@ -18,9 +18,9 @@ export default function Home() {
         <div className={styles.grid}>
           
           <Header />
-          <Footer />
+          
         </div>
-      </main>
+      </main><Footer />
     </div>
   )
 }
