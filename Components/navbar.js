@@ -7,7 +7,7 @@ import React from "react";
 
 export default function Navbar() {
   return (
-    <div className="fixed top-6 left-0 w-full bg-white">
+    <div className="fixed top-0 left-0 w-full bg-white p-5">
       <nav className=" flex justify-between shadow-sm max-w-xl mx-auto z-10">
         <div className="flex items-center">
           <h1 className="font-bold text-2xl cursor-pointer">

@@ -1,21 +1,7 @@
-import Navbar from "../Components/Navbar";
-import Footer from "../Components/footer";
-
-export default function AboutUs() {
-  return (
-    <>
-      {" "}
-      <Navbar />
-      <AboutUsPic />
-      <Footer />
-    </>
-  );
-}
-
-function AboutUsPic() {
+export default function Home() {
   return (
     <div>
-      {["2"].map((path) => {
+      {["header"].map((path) => {
         return (
           <div key={path}>
             <img
