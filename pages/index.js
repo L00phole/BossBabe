@@ -1,8 +1,8 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Header from '../Components/header'
 import Navbar from '../Components/navbar'
+import Footer from '../Components/footer'
 
 export default function Home() {
   return (
@@ -17,6 +17,7 @@ export default function Home() {
       <main className={styles.main}>
         <div className={styles.grid}>
           <Header />
+          <Footer />
         </div>
       </main>
     </div>
