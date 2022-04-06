@@ -5,14 +5,15 @@ import Image from 'next/image'
 const Footer = () => {
   return (
     <>
-     
-      <div className='text-center md:text-left'>
-          <h2>
+      <div className='grid gap-10 md:grid-cols-2 contain section'>
+           <div className='text-center md:text-left'>
+            <h2>
             BOSSBABE
-          </h2>
-          <p></p>
-      </div>
-       <div className="powered-by">
+            </h2> <br />
+            <p>Work it like a queen</p>
+            </div>
+        </div>
+          <div className="powered-by">
         <a
           href="https://jennie-michele.0.capacedev.se/"
           target="_blank"
@@ -24,6 +25,7 @@ const Footer = () => {
           </span>
         </a>
       </div>
+
     </>
   )
 }
