@@ -73,37 +73,14 @@ function SummerStyle() {
                     <div className="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
                       <div className="w-44 h-64 rounded-lg overflow-hidden sm:opacity-0 lg:opacity-100">
                         <img
-                          src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-01.jpg"
+                          src="https://images.unsplash.com/photo-1595078475328-1ab05d0a6a0e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=700&q=80"
                           alt=""
                           className="w-full h-full object-center object-cover"
                         />
                       </div>
                       <div className="w-44 h-64 rounded-lg overflow-hidden">
                         <img
-                          src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-02.jpg"
-                          alt=""
-                          className="w-full h-full object-center object-cover"
-                        />
-                      </div>
-                    </div>
-                    <div className="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
-                      <div className="w-44 h-64 rounded-lg overflow-hidden">
-                        <img
-                          src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-03.jpg"
-                          alt=""
-                          className="w-full h-full object-center object-cover"
-                        />
-                      </div>
-                      <div className="w-44 h-64 rounded-lg overflow-hidden">
-                        <img
-                          src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-04.jpg"
-                          alt=""
-                          className="w-full h-full object-center object-cover"
-                        />
-                      </div>
-                      <div className="w-44 h-64 rounded-lg overflow-hidden">
-                        <img
-                          src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-05.jpg"
+                          src="https://images.unsplash.com/photo-1550345332-09e3ac987658?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
                           alt=""
                           className="w-full h-full object-center object-cover"
                         />
@@ -112,14 +89,37 @@ function SummerStyle() {
                     <div className="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
                       <div className="w-44 h-64 rounded-lg overflow-hidden">
                         <img
-                          src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-06.jpg"
+                          src="https://images.unsplash.com/photo-1618073194091-9b24230ddb2a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
                           alt=""
                           className="w-full h-full object-center object-cover"
                         />
                       </div>
                       <div className="w-44 h-64 rounded-lg overflow-hidden">
                         <img
-                          src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-07.jpg"
+                          src="https://images.unsplash.com/photo-1577221084712-45b0445d2b00?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=698&q=80"
+                          alt=""
+                          className="w-full h-full object-center object-cover"
+                        />
+                      </div>
+                      <div className="w-44 h-64 rounded-lg overflow-hidden">
+                        <img
+                          src="https://images.unsplash.com/photo-1549476464-37392f717541?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+                          alt=""
+                          className="w-full h-full object-center object-cover"
+                        />
+                      </div>
+                    </div>
+                    <div className="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
+                      <div className="w-44 h-64 rounded-lg overflow-hidden">
+                        <img
+                          src="https://images.unsplash.com/photo-1624513764370-f29d72dc4e19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=742&q=80"
+                          alt=""
+                          className="w-full h-full object-center object-cover"
+                        />
+                      </div>
+                      <div className="w-44 h-64 rounded-lg overflow-hidden">
+                        <img
+                          src="https://images.unsplash.com/photo-1584863495140-a320b13a11a8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=673&q=80"
                           alt=""
                           className="w-full h-full object-center object-cover"
                         />
@@ -148,7 +148,7 @@ const callouts = [
     name: "Nyheter",
     description: "Senaste modet ",
     imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/home-page-02-edition-01.jpg",
+      "https://images.unsplash.com/photo-1609377375722-46264cf88939?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1164&q=80",
     imageAlt:
       "Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug.",
     href: "#",
@@ -157,7 +157,7 @@ const callouts = [
     name: "Klimatkompenserade leveranser",
     description: "Läs mer här",
     imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/home-page-02-edition-02.jpg",
+      "https://images.unsplash.com/photo-1617909517211-c4e4275bf5b6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
     imageAlt:
       "Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant.",
     href: "#",
@@ -166,7 +166,7 @@ const callouts = [
     name: "Återvunna material",
     description: "Vi kan minska vår miljö påverkan och bli mer hållbara",
     imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/home-page-02-edition-03.jpg",
+      "https://images.unsplash.com/photo-1569227997603-33b9f12af927?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
     imageAlt: "Collection of four insulated travel bottles on wooden shelf.",
     href: "#",
   },
@@ -175,7 +175,7 @@ const callouts = [
 function Kollektioner() {
   return (
     <div className="grid grid-col-3 grid-flow-col flex space-x-4 pb-10">
-      <div className="bg-gray-100">
+      <div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl mx-auto py-16 sm:py-24 lg:py-32 lg:max-w-none">
             <h2 className="text-2xl font-bold text-gray-900">Kollektioner</h2>
