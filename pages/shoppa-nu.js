@@ -6,6 +6,19 @@ export default function AboutUs() {
     <>
       {" "}
       <Navbar />
+      <div className="  pb-10 ">
+        {["5"].map((path) => {
+          return (
+            <div key={path}>
+              <img
+                src={`/${path}.jpg`}
+                alt="header"
+                style={{ width: "100vw", height: "auto" }}
+              />
+            </div>
+          );
+        })}
+      </div>
       <div className="grid grid-rows-3 grid-flow-col flex space-x-4  max-w-xl mx-auto pb-10">
         <a className="row-span-1">
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
