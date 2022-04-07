@@ -11,36 +11,7 @@ export default function Home() {
               alt="header"
               style={{ width: "100vw", height: "auto" }}
             />
-
-            {/*  <div className="grid grid-cols-3   mx-auto pb-10">
-              <a>
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum."
-              </a>
-              <a className="">
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum."
-              </a>
-              <a className="">
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum."
-              </a>
-            </div> */}
+            <OutletExampel />
             <SummerStyle />
             <Kollektioner />
           </div>
@@ -51,7 +22,7 @@ export default function Home() {
 }
 function SummerStyle() {
   return (
-    <div className="relative bg-white  pt-80 z-0">
+    <div className="relative bg-white pt-80">
       <div className="pt-16 pb-80 sm:pt-24 sm:pb-40 lg:pt-40 lg:pb-48">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:static">
           <div className="sm:max-w-lg">
@@ -131,7 +102,7 @@ function SummerStyle() {
 
               <a
                 href="#"
-                className="inline-block text-center bg-indigo-600 border border-transparent rounded-md py-3 px-8 font-medium text-white hover:bg-indigo-700"
+                className="inline-block bg-slate-800 border border-transparent rounded-md py-3 px-8 font-medium text-white hover:bg-slate-600"
               >
                 Läs mer här..
               </a>
@@ -142,7 +113,84 @@ function SummerStyle() {
     </div>
   );
 }
+const products = [
+  {
+    id: 1,
+    name: "Basic Sommar Set",
+    href: "#",
+    imageSrc:
+      "https://images.unsplash.com/photo-1606902965551-dce093cda6e7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+    imageAlt: "Front of men's Basic Tee in black.",
+    price: "349 SEK",
+  },
+  {
+    id: 2,
+    name: "Baggy Träningsbyxa",
+    href: "#",
+    imageSrc:
+      "https://images.unsplash.com/photo-1618355281911-84e6ec751d84?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+    imageAlt: "Front of men's Basic Tee in black.",
+    price: "599 SEK",
+  },
+  {
+    id: 3,
+    name: "Cute Jennie Set",
+    href: "#",
+    imageSrc:
+      "https://images.unsplash.com/photo-1618355281951-a174b87198e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+    imageAlt: "Front of men's Basic Tee in black.",
+    price: "499 SEK",
+  },
+  {
+    id: 4,
+    name: "Tränings T-shirt Herr",
+    href: "#",
+    imageSrc:
+      "https://images.unsplash.com/photo-1549476464-37392f717541?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+    imageAlt: "Front of men's Basic Tee in black.",
+    price: "299 SEK",
+  },
+];
 
+function OutletExampel() {
+  return (
+    <div className="bg-white">
+      <div className="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+        <h2 className="text-2xl font-extrabold tracking-tight text-gray-900">
+          Rekommenderas
+        </h2>
+
+        <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+          {products.map((product) => (
+            <div key={product.id} className="group relative">
+              <div className="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
+                <img
+                  src={product.imageSrc}
+                  alt={product.imageAlt}
+                  className="w-full h-full object-center object-cover lg:w-full lg:h-full"
+                />
+              </div>
+              <div className="mt-4 flex justify-between">
+                <div>
+                  <h3 className="text-sm text-gray-700">
+                    <a href={product.href}>
+                      <span aria-hidden="true" className="absolute inset-0" />
+                      {product.name}
+                    </a>
+                  </h3>
+                  <p className="mt-1 text-sm text-gray-500">{product.color}</p>
+                </div>
+                <p className="text-sm font-medium text-gray-900">
+                  {product.price}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
 const callouts = [
   {
     name: "Nyheter",

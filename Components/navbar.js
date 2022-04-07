@@ -3,13 +3,14 @@ import React from "react";
 
 export default function Navbar() {
   return (
-    <div className="fixed w-full bg-white p-5 ">
+    <div className="fixed w-full bg-white p-5 z-50">
       <nav className=" flex justify-between shadow-sm  mx-auto z-10">
         <div className="flex items-center">
           <h1 className="font-bold text-3xl cursor-pointer">
             <Link href="/">
               <a>
-                BOSS<span className="text-yellow-400">BABE</span>
+                <span className="text-slate-800">BOSS</span>
+                <span className="text-yellow-400">BABE</span>
               </a>
             </Link>
           </h1>
