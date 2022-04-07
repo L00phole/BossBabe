@@ -9,7 +9,7 @@ const Footer = () => {
             BOSS<span className="text-yellow-400">BABE</span>
           </h1>{" "}
           <br />
-          <p className="font-bold text-lg -mt-5">Work it like a boss</p>
+          <p className="font-bold text-lg -mt-5">Workout like a boss</p>
         </div>
         <div className="flex mb-2 place-content-center pb-10  ">
           <div className="mx-10 text-lg">
