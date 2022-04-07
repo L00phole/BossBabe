@@ -3,7 +3,7 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <>
-      <div className="bg-slate-800 text-white ">
+      <div className="bg-slate-800 text-white py-5 ">
         <div className="text-center  pb-10 ">
           <h1 className="font-bold text-4xl cursor-pointer">
             <span className="text-white">BOSS</span>
@@ -51,7 +51,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="font-bold text-sm mb-1 text-center ">
+        <div className="font-bold text-sm mb-0 text-center ">
           <a
             href="https://jennie-michele.0.capacedev.se/"
             target="_blank"
