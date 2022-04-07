@@ -7,7 +7,7 @@ export default function AboutUs() {
       {" "}
       <Navbar />
       <div className="absolute  pb-10 ">
-        {["3"].map((path) => {
+        {["2"].map((path) => {
           return (
             <div key={path}>
               <img
