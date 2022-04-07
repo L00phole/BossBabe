@@ -1,13 +1,8 @@
-import Navbar from "../Components/Navbar";
-import Footer from "../Components/footer";
-
 export default function AboutUs() {
   return (
     <>
       {" "}
-      <Navbar />
       <LogIn />
-      <Footer />
     </>
   );
 }
