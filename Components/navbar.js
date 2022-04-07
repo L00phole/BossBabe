@@ -1,13 +1,9 @@
 import Link from "next/link";
 import React from "react";
 
-{
-  /*Sticky navbar(alternativt en vit bakgrund),*/
-}
-
 export default function Navbar() {
   return (
-    <div className="fixed  w-full bg-white p-5">
+    <div className="fixed w-full bg-white p-5 ">
       <nav className=" flex justify-between shadow-sm max-w-xl mx-auto z-10">
         <div className="flex items-center">
           <h1 className="font-bold text-3xl cursor-pointer">
@@ -36,7 +32,7 @@ export default function Navbar() {
           </div>
         </div>
 
-        <div className="flex items-center">
+        <div className="flex items-center ">
           <a className="px-3">
             <svg
               className="cursor-pointer  h-6 w-6 "
@@ -57,7 +53,7 @@ export default function Navbar() {
           </a>
 
           <Link href="/profile">
-            <a className="px-3">
+            <a className="px-3 ">
               <svg
                 className="cursor-pointer h-8 w-8 "
                 xmlns="http://www.w3.org/2000/svg"

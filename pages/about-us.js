@@ -19,7 +19,7 @@ export default function AboutUs() {
           );
         })}
       </div>
-      <div className="grid grid-rows-3 grid-flow-col flex space-x-4  max-w-xl mx-auto pb-10">
+      <div className=" flex space-x-4  max-w-xl mx-auto pb-10">
         <a className="row-span-1">
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
