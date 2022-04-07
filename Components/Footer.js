@@ -3,10 +3,11 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <>
-      <div className="bg-yellow-400 ">
+      <div className="bg-slate-800 text-white ">
         <div className="text-center  pb-10 ">
           <h1 className="font-bold text-4xl cursor-pointer">
-            BOSS<span className="text-white">BABE</span>
+            <span className="text-white">BOSS</span>
+            <span className="text-yellow-400">BABE</span>
           </h1>{" "}
           <br />
           <p className="font-bold text-lg -mt-5">Workout like a boss</p>
