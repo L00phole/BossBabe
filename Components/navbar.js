@@ -4,7 +4,7 @@ import React from "react";
 export default function Navbar() {
   return (
     <div className="fixed w-full bg-white p-5 ">
-      <nav className=" flex justify-between shadow-sm max-w-xl mx-auto z-10">
+      <nav className=" flex justify-between shadow-sm  mx-auto z-10">
         <div className="flex items-center">
           <h1 className="font-bold text-3xl cursor-pointer">
             <Link href="/">
@@ -14,19 +14,19 @@ export default function Navbar() {
             </Link>
           </h1>
           <div className="ml-10 flex items-baseline space-x-4">
-            <Link href="/about-us">
+            <Link href="/om-oss">
               <a className="cursor-pointer text-black px-3 py-2 font-bold hover:text-yellow-400">
-                About us
+                Om Oss
               </a>
             </Link>
-            <Link href="/outlet">
+            <Link href="/rea">
               <a className="cursor-pointer text-black px-3 py-2 font-bold hover:text-yellow-400">
-                Outlet
+                Rea
               </a>
             </Link>
-            <Link href="/shop-now">
+            <Link href="/shoppa-nu">
               <a className="cursor-pointer text-black px-3 py-2 font-bold hover:text-yellow-400">
-                Shop now
+                Shoppa loss
               </a>
             </Link>
           </div>
@@ -52,7 +52,7 @@ export default function Navbar() {
             </svg>
           </a>
 
-          <Link href="/profile">
+          <Link href="/profil">
             <a className="px-3 ">
               <svg
                 className="cursor-pointer h-8 w-8 "
