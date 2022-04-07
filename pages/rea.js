@@ -6,7 +6,7 @@ export default function AboutUs() {
     <>
       {" "}
       <Navbar />
-      <div className="absolute  pb-10 ">
+      <div className="  pb-10 ">
         {["2"].map((path) => {
           return (
             <div key={path}>
