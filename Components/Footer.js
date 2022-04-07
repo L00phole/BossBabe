@@ -23,7 +23,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="mx-10 text-lg">
-            <h2 className=" text-xl pb-8 font-bold">Om oss</h2>
+            <h2 className=" text-xl pb-8 font-bold">Information</h2>
             <ul>
               <li className="mb-3">Om oss</li>
               <li className="mb-3">Karriär</li>
