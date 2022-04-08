@@ -3,9 +3,9 @@ import React from "react";
 
 export default function Navbar() {
   return (
-    <div className="fixed w-full bg-white p-5 z-50">
-      <nav className=" flex justify-between shadow-sm  mx-auto z-10">
-        <div className="flex items-center">
+    <div className="md:fixed fluid w-full bg-white p-5 z-50 ">
+      <nav className=" md:flex ljustify-between shadow-sm  mx-auto z-10">
+        <div className="md:flex items-center">
           <h1 className="font-bold text-3xl cursor-pointer">
             <Link href="/">
               <a>
