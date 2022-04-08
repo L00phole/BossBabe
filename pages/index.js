@@ -21,9 +21,9 @@ export default function Home() {
 }
 function SummerStyle() {
   return (
-    <div className="relative bg-white pt-80">
-      <div className="pt-16 pb-80 sm:pt-24 sm:pb-40 lg:pt-40 lg:pb-48">
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:static">
+    <div className="pt-40">
+      <div className=" sm:pb-40 lg:pt-40 lg:pb-48">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
           <div className="sm:max-w-lg">
             <h1 className="text-4xl font font-extrabold tracking-tight text-gray-900 sm:text-6xl">
               Sommarens mode är äntligen här!
@@ -42,10 +42,10 @@ function SummerStyle() {
             <div className="mt-10">
               <div
                 aria-hidden="true"
-                className="pointer-events-none lg:absolute lg:inset-y-0 lg:max-w-7xl lg:mx-auto lg:w-full"
+                className="pointer-events-none  lg:inset-y-0 lg:max-w-7xl lg:mx-auto lg:w-full"
               >
                 <div className=" absolute sm:mt-10 transform sm:left-1/2 sm:top-0 sm:translate-x-8 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-8">
-                  <div className="md:flex items-center space-x-6 lg:space-x-8">
+                  <div className="flex items-center space-x-6 lg:space-x-8">
                     <div className="md:flex-shrink-0 grid grid-cols-1 gap-y-8 lg:gap-y-8">
                       <div className="w-44 h-64 rounded-lg overflow-hidden sm:opacity-0 lg:opacity-100">
                         <img
@@ -152,7 +152,7 @@ const products = [
 
 function OutletExampel() {
   return (
-    <div className="bg-white">
+    <div className="flex bg-white">
       <div className="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
         <h2 className="text-2xl font-extrabold tracking-tight text-gray-900">
           Rekommenderas
@@ -160,7 +160,7 @@ function OutletExampel() {
 
         <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
           {products.map((product) => (
-            <div key={product.id} className="group relative">
+            <div key={product.id}>
               <div className="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
                 <img
                   src={product.imageSrc}
@@ -229,7 +229,7 @@ function Kollektioner() {
             <div className="mt-6 space-y-12 lg:space-y-0 grid grid-cols-3 lg:gap-x-6">
               {callouts.map((callout) => (
                 <div key={callout.name} className="group relative">
-                  <div className="relative w-full h-80 bg-white rounded-lg overflow-hidden group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
+                  <div className=" w-full h-80 bg-white rounded-lg overflow-hidden group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
                     <img
                       src={callout.imageSrc}
                       alt={callout.imageAlt}
@@ -238,7 +238,7 @@ function Kollektioner() {
                   </div>
                   <h3 className="mt-6 text-sm text-gray-500">
                     <a href={callout.href}>
-                      <span className="absolute inset-0" />
+                      <span className=" inset-0" />
                       {callout.name}
                     </a>
                   </h3>
