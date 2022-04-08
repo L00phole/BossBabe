@@ -1,9 +1,10 @@
 import Image from "next/image";
+import { useState } from "react";
 
 const Footer = () => {
   return (
     <>
-      <div className="bg-slate-800 text-white py-5 ">
+      <div className="bg-slate-800 text-white py-5 sm:w-screen">
         <div className="text-center  pb-10 ">
           <h1 className="font-bold text-4xl cursor-pointer">
             <span className="text-white">BOSS</span>
@@ -12,7 +13,7 @@ const Footer = () => {
           <br />
           <p className="font-bold text-lg -mt-5">Workout like a boss</p>
         </div>
-        <div className="flex mb-2 place-content-center pb-10  ">
+        <div className="md:flex place-content-center pb-10">
           <div className="mx-10 text-lg">
             <h2 className="text-xl pb-8 font-bold">Shopping</h2>
             <ul>
@@ -31,24 +32,8 @@ const Footer = () => {
               <li className="mb-3">Cookie policy</li>
             </ul>
           </div>
-          <div className="mx-10 text-lg">
-            <h2 className=" text-xl pb-8 font-bold">Kundservice</h2>
-            <ul>
-              <li className="mb-3">Hjälp</li>
-              <li className="mb-3">Hitta butik</li>
-              <li className="mb-3">Sekretess och säkerhet</li>
-              <li className="mb-3">Kontakta oss</li>
-            </ul>
-          </div>
-          <div className=" mx-10 text-lg">
-            <h2 className=" text-xl pb-8 font-bold">Följ oss</h2>
-            <ul>
-              <li className="mb-3">Facebook</li>
-              <li className="mb-3">Instagram</li>
-              <li className="mb-3">TikTok</li>
-              <li className="mb-3">YouTube</li>
-            </ul>
-          </div>
+
+          <FooterFollow />
         </div>
 
         <div className="font-bold text-sm mb-0 text-center ">
@@ -73,3 +58,25 @@ const Footer = () => {
   );
 };
 export default Footer;
+
+const FooterFollow = () => {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <>
+      <div className=" mx-10 text-lg">
+        <h2 onClick={() => setOpen(!open)} className=" text-xl pb-8 font-bold">
+          Följ oss
+        </h2>
+        {open ? (
+          <ul>
+            <li className="mb-3">Facebook</li>
+            <li className="mb-3">Instagram</li>
+            <li className="mb-3">TikTok</li>
+            <li className="mb-3">YouTube</li>
+          </ul>
+        ) : null}
+      </div>
+    </>
+  );
+};
