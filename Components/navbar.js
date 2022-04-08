@@ -1,16 +1,15 @@
-import Link from "next/link";
 import React from "react";
 import { useState } from "react";
-
-function NavLink({ to, children }) {
-  return (
-    <a href={to} className={`mx-4`}>
-      {children}
-    </a>
-  );
-}
+import Link from "next/link";
 
 function MobileNav({ open, setOpen }) {
+  const handleMenuOpen = () => {
+    let timeout;
+    timeout = setTimeout(() => {
+      setOpen(!open);
+    }, 100);
+    return () => clearTimeout(timeout);
+  };
   return (
     <div
       className={`fixed absolute top-0 left-0 h-screen w-screen bg-white transform ${
@@ -18,7 +17,6 @@ function MobileNav({ open, setOpen }) {
       } transition-transform duration-300 ease-in-out filter drop-shadow-md `}
     >
       <div className=" fixed flex items-center justify-center filter drop-shadow-md bg-white h-20">
-        {" "}
         <h1 className="font-bold text-3xl cursor-pointer">
           <a className="text-2xl font-semibold" href="/">
             <span className="text-slate-800">BOSS</span>
@@ -30,33 +28,21 @@ function MobileNav({ open, setOpen }) {
         <a
           className="text-xl font-medium my-4 hover:text-yellow-400"
           href="/om-oss"
-          onClick={() =>
-            setTimeout(() => {
-              setOpen(!open);
-            }, 100)
-          }
+          onClick={() => handleMenuOpen()}
         >
           Om oss
         </a>
         <a
           className="text-xl font-medium my-4 hover:text-yellow-400"
           href="/rea"
-          onClick={() =>
-            setTimeout(() => {
-              setOpen(!open);
-            }, 100)
-          }
+          onClick={() => handleMenuOpen()}
         >
           Rea
         </a>
         <a
           className="text-xl font-medium my-4 hover:text-yellow-400"
           href="/shoppa-nu"
-          onClick={() =>
-            setTimeout(() => {
-              setOpen(!open);
-            }, 100)
-          }
+          onClick={() => handleMenuOpen()}
         >
           Shoppa loss
         </a>
@@ -69,21 +55,17 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   return (
     <nav className="fixed fluid w-full flex filter drop-shadow-md bg-white px-4 py-4 h-20 items-center">
-      <MobileNav open={open} setOpen={setOpen} />
+      {/* <MobileNav open={open} setOpen={setOpen} /> */}
       <div className="w-3/12 flex items-center">
         <a className="text-2xl font-semibold" href="/">
-          <a>
-            <span className="text-slate-800">BOSS</span>
-            <span className="text-yellow-400">BABE</span>
-          </a>
+          <span className="text-slate-800">BOSS</span>
+          <span className="text-yellow-400">BABE</span>
         </a>
       </div>
       <div className="w-9/12 flex justify-end items-center">
         <div
           className="z-50 flex relative w-8 h-8 flex-col justify-between items-center md:hidden"
-          onClick={() => {
-            setOpen(!open);
-          }}
+          onClick={() => setOpen(!open)}
         >
           <span
             className={`h-1 w-full bg-black rounded-lg transform transition duration-300 ease-in-out ${
@@ -103,13 +85,13 @@ export default function Navbar() {
         </div>
 
         <div className="hidden md:flex cursor-pointer text-black px-3 py-2 font-bold hover:text-yellow-400">
-          <NavLink to="/om-oss">Om Oss</NavLink>
+          <Link href="/om-oss">Om Oss</Link>
         </div>
         <div className="hidden md:flex cursor-pointer text-black px-3 py-2 font-bold hover:text-yellow-400">
-          <NavLink to="/rea">Rea</NavLink>
+          <Link href="/rea">Rea</Link>
         </div>
         <div className="hidden md:flex cursor-pointer text-black px-3 py-2 font-bold hover:text-yellow-400">
-          <NavLink to="/shoppa-nu">Shoppa loss</NavLink>
+          <Link href="/shoppa-nu">Shoppa loss</Link>
         </div>
       </div>
     </nav>
