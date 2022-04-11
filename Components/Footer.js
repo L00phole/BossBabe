@@ -8,7 +8,7 @@ const Footer = () => {
       {isBreakpoint ? (
         <div>
           <>
-            <div className="bg-slate-800 text-white py-5 sm:w-screen sticky mb-0">
+            <div className="bg-slate-800 text-white py-5 w-screen sticky mb-0">
               <div className="text-center  pb-10 ">
                 <h1 className="font-bold text-4xl ">
                   <span className="text-white">BOSS</span>
