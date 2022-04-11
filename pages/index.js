@@ -22,8 +22,8 @@ export default function Home() {
 function SummerStyle() {
   return (
     <div className="pt-40">
-      <div className=" sm:pb-40 lg:pt-40 lg:pb-48">
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
+      <div className=" pt-40">
+        <div className="grid md:grid-cols-2 grid-cols-1 items-center relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
           <div className="sm:max-w-lg">
             <h1 className="text-4xl font font-extrabold tracking-tight text-gray-900 sm:text-6xl">
               Sommarens mode är äntligen här!
@@ -33,74 +33,68 @@ function SummerStyle() {
             </p>
             <a
               href="#"
-              className="mt-10 inline-block bg-slate-800 border border-transparent rounded-md py-3 px-8 font-medium text-white hover:bg-slate-600"
+              className="mt-10 inline-block bg-slate-800 border border-transparent rounded-md py-3 px-8 font-medium text-white md:hover:bg-slate-600"
             >
               Läs mer här..
             </a>
           </div>
-          <div>
-            <div className="mt-10">
-              <div
-                aria-hidden="true"
-                className="pointer-events-none  lg:inset-y-0 lg:max-w-7xl lg:mx-auto lg:w-full"
-              >
-                <div className=" absolute sm:mt-10 transform sm:left-1/2 sm:top-0 sm:translate-x-8 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-8">
-                  <div className="flex items-center space-x-6 lg:space-x-8">
-                    <div className="md:flex-shrink-0 grid grid-cols-1 gap-y-8 lg:gap-y-8">
-                      <div className="w-44 h-64 rounded-lg overflow-hidden sm:opacity-0 lg:opacity-100">
-                        <img
-                          src="https://images.unsplash.com/photo-1595078475328-1ab05d0a6a0e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=700&q=80"
-                          alt=""
-                          className="w-full h-full object-center object-cover"
-                        />
-                      </div>
-                      <div className="w-44 h-64 rounded-lg overflow-hidden">
-                        <img
-                          src="https://images.unsplash.com/photo-1550345332-09e3ac987658?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
-                          alt=""
-                          className="w-full h-full object-center object-cover"
-                        />
-                      </div>
-                    </div>
-                    <div className="flex-shrink-0 grid grid-cols-1 gap-y-8 lg:gap-y-8">
-                      <div className="w-44 h-64 rounded-lg overflow-hidden">
-                        <img
-                          src="https://images.unsplash.com/photo-1618073194091-9b24230ddb2a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
-                          alt=""
-                          className="w-full h-full object-center object-cover"
-                        />
-                      </div>
-                      <div className="w-44 h-64 rounded-lg overflow-hidden">
-                        <img
-                          src="https://images.unsplash.com/photo-1577221084712-45b0445d2b00?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=698&q=80"
-                          alt=""
-                          className="w-full h-full object-center object-cover"
-                        />
-                      </div>
-                      <div className="w-44 h-64 rounded-lg overflow-hidden">
-                        <img
-                          src="https://images.unsplash.com/photo-1549476464-37392f717541?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
-                          alt=""
-                          className="w-full h-full object-center object-cover"
-                        />
-                      </div>
-                    </div>
-                    <div className="flex-shrink-0 grid grid-cols-1 gap-y-8 lg:gap-y-8">
-                      <div className="w-44 h-64 rounded-lg overflow-hidden">
-                        <img
-                          src="https://images.unsplash.com/photo-1624513764370-f29d72dc4e19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=742&q=80"
-                          alt=""
-                          className="w-full h-full object-center object-cover"
-                        />
-                      </div>
-                      <div className="w-44 h-64 rounded-lg overflow-hidden">
-                        <img
-                          src="https://images.unsplash.com/photo-1584863495140-a320b13a11a8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=673&q=80"
-                          alt=""
-                          className="w-full h-full object-center object-cover"
-                        />
-                      </div>
-                    </div>
+
+          <div className="md:pointer-events-none  md:inset-y-0 md::max-w-7xl md::mx-auto md::w-full">
+            <div className=" md:relative ">
+              <div className="md:flex md:items-center md:space-x-6 md:space-x-8">
+                <div className="md:flex-shrink-0 md:grid md:grid-cols-1 md:gap-y-8 lg:gap-y-8">
+                  <div className="w-44 h-64 rounded-lg overflow-hidden sm:opacity-0 lg:opacity-100">
+                    <img
+                      src="https://images.unsplash.com/photo-1595078475328-1ab05d0a6a0e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=700&q=80"
+                      alt=""
+                      className="w-full h-full object-center object-cover"
+                    />
+                  </div>
+                  <div className="w-44 h-64 rounded-lg overflow-hidden">
+                    <img
+                      src="https://images.unsplash.com/photo-1550345332-09e3ac987658?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+                      alt=""
+                      className="w-full h-full object-center object-cover"
+                    />
+                  </div>
+                </div>
+                <div className="flex-shrink-0 grid grid-cols-1 gap-y-8 lg:gap-y-8">
+                  <div className="w-44 h-64 rounded-lg overflow-hidden">
+                    <img
+                      src="https://images.unsplash.com/photo-1618073194091-9b24230ddb2a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+                      alt=""
+                      className="w-full h-full object-center object-cover"
+                    />
+                  </div>
+                  <div className="w-44 h-64 rounded-lg overflow-hidden">
+                    <img
+                      src="https://images.unsplash.com/photo-1577221084712-45b0445d2b00?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=698&q=80"
+                      alt=""
+                      className="w-full h-full object-center object-cover"
+                    />
+                  </div>
+                  <div className="w-44 h-64 rounded-lg overflow-hidden">
+                    <img
+                      src="https://images.unsplash.com/photo-1549476464-37392f717541?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+                      alt=""
+                      className="w-full h-full object-center object-cover"
+                    />
+                  </div>
+                </div>
+                <div className="flex-shrink-0 grid grid-cols-1 gap-y-8 lg:gap-y-8">
+                  <div className="  w-44 h-64 rounded-lg overflow-hidden">
+                    <img
+                      src="https://images.unsplash.com/photo-1624513764370-f29d72dc4e19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=742&q=80"
+                      alt=""
+                      className="w-full h-full object-center object-cover"
+                    />
+                  </div>
+                  <div className=" w-44 h-64 rounded-lg overflow-hidden">
+                    <img
+                      src="https://images.unsplash.com/photo-1584863495140-a320b13a11a8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=673&q=80"
+                      alt=""
+                      className="w-full h-full object-center object-cover"
+                    />
                   </div>
                 </div>
               </div>
@@ -220,10 +214,10 @@ const callouts = [
 
 function Kollektioner() {
   return (
-    <div className="grid grid-col-3 grid-flow-col flex space-x-4 pb-10">
+    <div className="grid grid-col-3 grid-flow-col flex md:space-x-4 pb-10">
       <div>
-        <div className="max-w-7xl mx-auto  px-4 sm:px-6 lg:px-8">
-          <div className="max-w-2xl mx-auto py-16 sm:py-24 lg:py-32 lg:max-w-none">
+        <div className="max-w-7xl mx-auto  px-4 px-6 lg:px-8">
+          <div className="max-w-2xl mx-auto py-16 py-24 lg:py-32 lg:max-w-none">
             <h2 className="text-2xl font-bold text-gray-900">Kollektioner</h2>
 
             <div className="mt-6 space-y-12 lg:space-y-0 grid grid-cols-3 lg:gap-x-6">
