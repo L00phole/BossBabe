@@ -11,7 +11,7 @@ export default function Layout({ children }) {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <Navbar />
-        <main>{children}</main>
+        <main className="overflow-hidden">{children}</main>
         <Footer />
       </div>
     </>
