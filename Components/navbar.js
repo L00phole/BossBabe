@@ -18,34 +18,37 @@ function MobileNav({ open, setOpen }) {
     >
       <div className=" fixed flex items-center justify-center filter drop-shadow-md bg-white h-20">
         <h1 className="font-bold text-3xl cursor-pointer">
-          <a className="text-2xl font-semibold" href="/">
-            <span className="text-slate-800">BOSS</span>
-            <span className="text-yellow-400">BABE</span>
-          </a>
+          <Link className="text-2xl font-semibold" href="/">
+            <a>
+              <span className=" text-slate-800">BOSS</span>
+              <span className="text-yellow-400">BABE</span>
+            </a>
+          </Link>
         </h1>
       </div>
-      <div className="flex flex-col ml-4">
-        <a
-          className="text-xl font-medium my-4 hover:text-yellow-400"
+      <div className=" flex flex-col ml-4">
+        <Link
+          className="mt-3 text-xl font-medium my-4 hover:text-yellow-400"
           href="/om-oss"
           onClick={() => handleMenuOpen()}
         >
-          Om oss
-        </a>
-        <a
+          <a>Om oss</a>
+        </Link>
+        <Link
           className="text-xl font-medium my-4 hover:text-yellow-400"
           href="/rea"
           onClick={() => handleMenuOpen()}
         >
-          Rea
-        </a>
-        <a
+          <a>Rea</a>
+        </Link>
+        <Link
           className="text-xl font-medium my-4 hover:text-yellow-400"
           href="/shoppa-nu"
           onClick={() => handleMenuOpen()}
         >
-          Shoppa loss
-        </a>
+          <a>Shoppa loss</a>
+        </Link>
+
         <Link href="/">
           <a className="px-3">
             <svg
@@ -110,10 +113,12 @@ export default function Navbar() {
     <nav className="fixed z-50 fluid w-full flex filter drop-shadow-md bg-white px-4 py-4 h-20 items-center">
       <MobileNav open={open} setOpen={setOpen} />
       <div className="w-3/12 flex items-center">
-        <a className="text-2xl font-semibold" href="/">
-          <span className="text-slate-800">BOSS</span>
-          <span className="text-yellow-400">BABE</span>
-        </a>
+        <Link className="text-2xl font-semibold" href="/">
+          <a>
+            <span className="text-slate-800">BOSS</span>
+            <span className="text-yellow-400">BABE</span>
+          </a>
+        </Link>
       </div>
       <div className="w-9/12 flex justify-end items-center">
         <div
