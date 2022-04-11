@@ -17,11 +17,11 @@ function MobileNav({ open, setOpen }) {
       } transition-transform duration-300 ease-in-out filter drop-shadow-md `}
     >
       <div className=" fixed flex items-center justify-center filter drop-shadow-md bg-white h-20">
-        <h1 className="font-bold text-3xl cursor-pointer">
-          <Link className="text-2xl font-semibold" href="/">
+        <h1 className=" cursor-pointer">
+          <Link href="/">
             <a>
-              <span className=" text-slate-800">BOSS</span>
-              <span className="text-yellow-400">BABE</span>
+              <span className="text-3xl font-bold text-slate-800">BOSS</span>
+              <span className="text-3xl font-bold text-yellow-400">BABE</span>
             </a>
           </Link>
         </h1>
@@ -113,10 +113,10 @@ export default function Navbar() {
     <nav className="fixed z-50 fluid w-full flex filter drop-shadow-md bg-white px-4 py-4 h-20 items-center">
       <MobileNav open={open} setOpen={setOpen} />
       <div className="w-3/12 flex items-center">
-        <Link className="text-2xl font-semibold" href="/">
+        <Link href="/">
           <a>
-            <span className="text-slate-800">BOSS</span>
-            <span className="text-yellow-400">BABE</span>
+            <span className="text-3xl font-bold text-slate-800 ">BOSS</span>
+            <span className="text-3xl font-bold text-yellow-400">BABE</span>
           </a>
         </Link>
       </div>
