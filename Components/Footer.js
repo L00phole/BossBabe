@@ -1,3 +1,4 @@
+import useMediaQuery from "./UseState";
 import { useState, useEffect } from "react";
 import React, { useCallback } from "react";
 
@@ -17,7 +18,7 @@ const Footer = () => {
                 <br />
                 <p className="font-bold text-lg -mt-5">Workout like a boss</p>
               </div>
-              <div className="md:flex place-content-center pb-10">
+              <div className="md:flex place-content-center pb-10 ">
                 <FooterThingy label="Shopping">
                   <ul>
                     <li className="mb-3">Nyheter</li>
@@ -79,7 +80,9 @@ const Footer = () => {
             </div>
             <div className="md:flex place-content-center pb-10">
               <div className="mx-10 text-lg">
-                <h2 className="text-xl pb-8 font-bold">Shopping</h2>
+                <h2 className="hover:text-2xl text-xl pb-8 font-bold">
+                  Shopping
+                </h2>
                 <ul>
                   <li className="mb-3">Nyheter</li>
                   <li className="mb-3">Bästsäljare</li>
@@ -88,7 +91,9 @@ const Footer = () => {
                 </ul>
               </div>
               <div className="mx-10 text-lg">
-                <h2 className=" text-xl pb-8 font-bold">Information</h2>
+                <h2 className="hover:text-2xl text-xl pb-8 font-bold">
+                  Information
+                </h2>
                 <ul>
                   <li className="mb-3">Om oss</li>
                   <li className="mb-3">Karriär</li>
@@ -97,7 +102,9 @@ const Footer = () => {
                 </ul>
               </div>
               <div className=" mx-10 text-lg">
-                <h2 className=" text-xl pb-8 font-bold">Kundservice</h2>
+                <h2 className="hover:text-2xl text-xl pb-8 font-bold">
+                  Kundservice
+                </h2>
                 <ul>
                   <li className="mb-3">Hjälp</li>
                   <li className="mb-3">Hitta butik</li>
@@ -106,7 +113,9 @@ const Footer = () => {
                 </ul>
               </div>
               <div className=" mx-10 text-lg">
-                <h2 className=" text-xl pb-8 font-bold ">Följ oss</h2>
+                <h2 className="hover:text-2xl text-xl pb-8 font-bold ">
+                  Följ oss
+                </h2>
                 <ul>
                   <li className="mb-3">Facebook</li>
                   <li className="mb-3">Instagram</li>
@@ -138,39 +147,11 @@ const FooterThingy = (props) => {
 
   return (
     <div className=" mx-10 text-lg ">
-      <h2
-        onClick={() => setOpen(!open)}
-        className=" text-xl pb-5 font-bold cursor-pointer"
-      >
+      <h2 onClick={() => setOpen(!open)} className="  text-xl pb-5 font-bold ">
         {props.label}
       </h2>
 
       {open && <div className="content pb-10">{props.children}</div>}
     </div>
   );
-};
-
-const useMediaQuery = (width) => {
-  const [targetReached, setTargetReached] = useState(false);
-
-  const updateTarget = useCallback((e) => {
-    if (e.matches) {
-      setTargetReached(true);
-    } else {
-      setTargetReached(false);
-    }
-  }, []);
-
-  useEffect(() => {
-    const media = window.matchMedia(`(max-width: ${width}px)`);
-    media.addEventListener("change", (e) => updateTarget(e));
-
-    if (media.matches) {
-      setTargetReached(true);
-    }
-
-    return () => media.removeEventListener("change", (e) => updateTarget(e));
-  }, [updateTarget, width]);
-
-  return targetReached;
 };
