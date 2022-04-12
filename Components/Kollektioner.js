@@ -7,7 +7,7 @@ const Kollektioner = () => {
     <div>
       {isBreakpoint ? (
         <div>
-          <div className="max-w-2xl mx-3 py-16 py-24 ">
+          <div className="max-w-2xl  py-16 py-24 ">
             <h2 className="text-2xl font-bold text-gray-900">Kollektioner</h2>
 
             <div className="mt-6 space-y-12">
@@ -19,7 +19,6 @@ const Kollektioner = () => {
                       layout="fill"
                       objectFit="cover"
                       alt={callout.imageAlt}
-                      className="w-full h-full object-center object-cover"
                     />
                   </div>
                   <h3 className="mt-6 text-sm text-gray-500">
@@ -48,7 +47,7 @@ const Kollektioner = () => {
                 <div className="mt-6 space-y-12 lg:space-y-0 grid grid-cols-3 lg:gap-x-6">
                   {callouts.map((callout) => (
                     <div key={callout.name} className="group relative">
-                      <div className=" w-full h-80 bg-white rounded-lg overflow-hidden group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
+                      <div className=" relative w-full h-80 bg-white rounded-lg overflow-hidden group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
                         <Image
                           src={callout.imageSrc}
                           layout="fill"
@@ -57,15 +56,14 @@ const Kollektioner = () => {
                           className="w-full h-full object-center object-cover"
                         />
                       </div>
-                      <h3 className="mt-6 text-sm text-gray-500">
-                        <a href={callout.href}>
-                          <span className=" inset-0" />
-                          {callout.name}
-                        </a>
-                      </h3>
-                      <p className="text-base font-semibold text-gray-900">
-                        {callout.description}
-                      </p>
+                      <div>
+                        <h3 className=" text-lg text-gray-500">
+                          <a href={callout.href}>{callout.name}</a>
+                        </h3>
+                        <p className="text-xl font-semibold text-gray-900">
+                          {callout.description}
+                        </p>
+                      </div>
                     </div>
                   ))}
                 </div>
