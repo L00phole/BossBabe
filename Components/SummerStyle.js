@@ -23,7 +23,7 @@ const Summer = () => {
                     Läs mer här..
                   </a>
                 </div>
-                <div className=" mt-10 px-5 ">
+                <div className=" mt-10 px-5  ">
                   <img
                     src="https://images.unsplash.com/photo-1577221084712-45b0445d2b00?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=698&q=80"
                     alt=""

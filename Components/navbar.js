@@ -16,7 +16,7 @@ function MobileNav({ open, setOpen }) {
         open ? "-translate-x-0" : "-translate-x-full"
       } transition-transform duration-300 ease-in-out filter drop-shadow-md `}
     >
-      <div className=" fixed flex items-center justify-center filter drop-shadow-md bg-white h-20">
+      <div className=" fixed w-full flex items-center justify-center filter drop-shadow-md bg-white h-20">
         <h1 className=" cursor-pointer">
           <Link href="/">
             <a>
@@ -121,7 +121,7 @@ export default function Navbar() {
   return (
     <nav className="fixed z-50 fluid w-full flex justify-between filter drop-shadow-md bg-white px-4 py-4 h-20 ">
       <MobileNav open={open} setOpen={setOpen} />
-      <div className=" flex items-center">
+      <div className=" flex  items-center">
         <Link href="/">
           <a>
             <span className="text-3xl font-bold text-slate-800 ">BOSS</span>
@@ -129,9 +129,9 @@ export default function Navbar() {
           </a>
         </Link>
       </div>
-      <div className=" flex justify-end items-center">
+      <div className=" flex  justify-end items-center">
         <div
-          className="z-50 flex relative w-8 h-8 flex-col  justify-between  md:hidden"
+          className="z-50 flex  relative w-8 h-8 flex-col  justify-between  md:hidden"
           onClick={() => setOpen(!open)}
         >
           <span
