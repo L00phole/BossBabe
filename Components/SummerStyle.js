@@ -35,8 +35,8 @@ const Summer = () => {
           </div>
         </div>
       ) : (
-        <div className="pt-40">
-          <div className=" pt-40">
+        <div className="pt-10">
+          <div className=" pt-10">
             <div className="grid md:grid-cols-2 grid-cols-1 items-center relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
               <div className="sm:max-w-lg">
                 <h1 className="text-4xl font font-extrabold tracking-tight text-gray-900 sm:text-6xl">
