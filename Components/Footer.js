@@ -69,7 +69,7 @@ const Footer = () => {
         </div>
       ) : (
         <>
-          <div className="bg-slate-800 text-white py-5 sm:w-full">
+          <div className="max-h-[400px] md:h-[400px] bg-slate-800 text-white py-5 sm:w-full">
             <div className="text-center  pb-10 ">
               <h1 className="font-bold text-4xl ">
                 <span className="text-white">BOSS</span>
@@ -81,7 +81,7 @@ const Footer = () => {
             <div className="grid grid-cols-4  pb-10">
               <div className="grid justify-center text-lg">
                 <div>
-                  <h2 className="hover:text-2xl text-xl  font-bold">
+                  <h2 className="hover:text-2xl text-xl pb-4 font-bold">
                     Shopping
                   </h2>
                 </div>
@@ -97,7 +97,7 @@ const Footer = () => {
               </div>
               <div className="grid justify-center  text-lg">
                 <div>
-                  <h2 className="hover:text-2xl text-xl  font-bold">
+                  <h2 className="pb-4 hover:text-2xl text-xl  font-bold">
                     Information
                   </h2>
                 </div>
@@ -112,22 +112,22 @@ const Footer = () => {
               </div>
               <div className="grid justify-center  text-lg">
                 <div>
-                  <h2 className="hover:text-2xl text-xl pb-8 font-bold">
+                  <h2 className="pb-4 hover:text-2xl text-xl  font-bold">
                     Kundservice
                   </h2>
                 </div>
                 <div>
                   <ul>
-                    <li className="mb-3">Hjälp</li>
-                    <li className="mb-3">Hitta butik</li>
-                    <li className="mb-3">Sekretess och säkerhet</li>
-                    <li className="mb-3">Kontakta oss</li>
+                    <li className="pb-3">Hjälp</li>
+                    <li className="pb-3">Hitta butik</li>
+                    <li className="pb-3">Sekretess och säkerhet</li>
+                    <li className="pb-3">Kontakta oss</li>
                   </ul>
                 </div>
               </div>
               <div className="grid justify-center text-lg">
                 <div>
-                  <h2 className="hover:text-2xl text-xl pb-8 font-bold ">
+                  <h2 className="pb-4 hover:text-2xl text-xl  font-bold ">
                     Följ oss
                   </h2>
                 </div>
