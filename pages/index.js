@@ -3,9 +3,10 @@ import Rekommenderas from "../Components/Rekommenderas";
 import Kollektioner from "../Components/Kollektioner";
 import Image from "next/image";
 import wp from "../lib/wp/wp.js";
+import getRecommendedProducts from "../Components/getRecommendedProducts";
 
-export default function Home({ posts }) {
-  console.log(posts);
+export default function Home({ products }) {
+  console.log(products);
   const image =
     "https://images.unsplash.com/photo-1574680088814-c9e8a10d8a4d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80";
   const obj = {
@@ -26,22 +27,15 @@ export default function Home({ posts }) {
           />
         )}
       </div>
+      <Rekommenderas products={products} />
 
-      <Rekommenderas />
       <SummerStyle />
       <Kollektioner />
     </div>
   );
 }
 export async function getStaticProps() {
-  const data = await wp(`
-  query NewQuery {
-  posts {
-    nodes {
-      title
-    }
-  }
-}`);
-  console.log(data);
-  return { props: { posts: data } };
+  const products = await getRecommendedProducts();
+  console.log(products);
+  return { props: { products } };
 }
