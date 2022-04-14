@@ -28,30 +28,40 @@ function MobileNav({ open, setOpen }) {
       </div>
       <div className="mt-24 flex flex-col ml-4">
         <Link
+          className="text-xl font-medium my-4 hover:text-yellow-400"
+          href="/dam"
+          onClick={() => handleMenuOpen()}
+        >
+          <a className="cursor-pointer text-lg text-black font-bold pb-2">
+            Dam
+          </a>
+        </Link>
+        <Link
+          className="text-xl font-medium my-4 hover:text-yellow-400"
+          href="/herr"
+          onClick={() => handleMenuOpen()}
+        >
+          <a className="cursor-pointer text-lg text-black font-bold pb-2">
+            Herr
+          </a>
+        </Link>
+        <Link
+          className="text-xl font-medium my-4 hover:text-yellow-400"
+          href="/outlet"
+          onClick={() => handleMenuOpen()}
+        >
+          <a className="cursor-pointer text-lg text-black font-bold pb-2">
+            Outlet
+          </a>
+        </Link>
+
+        <Link
           className=" mt-3 text-xl font-medium my-4 hover:text-yellow-400"
-          href="/om-oss"
+          href="/kontakta-oss"
           onClick={() => handleMenuOpen()}
         >
           <a className="cursor-pointer text-lg text-black font-bold pb-2">
-            Om oss
-          </a>
-        </Link>
-        <Link
-          className="text-xl font-medium my-4 hover:text-yellow-400"
-          href="/rea"
-          onClick={() => handleMenuOpen()}
-        >
-          <a className="cursor-pointer text-lg text-black font-bold pb-2">
-            Rea
-          </a>
-        </Link>
-        <Link
-          className="text-xl font-medium my-4 hover:text-yellow-400"
-          href="/shoppa-nu"
-          onClick={() => handleMenuOpen()}
-        >
-          <a className="cursor-pointer text-lg text-black font-bold pb-2">
-            Shoppa loss
+            Kontakta oss
           </a>
         </Link>
         <Link href="/">
@@ -76,7 +86,7 @@ function MobileNav({ open, setOpen }) {
           </a>
         </Link>
 
-        <Link href="/profil">
+        {/* <Link href="/profil">
           <a className="cursor-pointer flex space-x-[5px] items-center text-lg text-black font-bold pb-2">
             <svg
               className="cursor-pointer h-8 w-8 "
@@ -91,7 +101,7 @@ function MobileNav({ open, setOpen }) {
             </svg>
             <p>Profil</p>
           </a>
-        </Link>
+        </Link> */}
         <Link href="/my-cart">
           <a className=" cursor-pointer flex space-x-[5px] items-center text-lg text-black font-bold pb-2">
             <svg
@@ -150,17 +160,21 @@ export default function Navbar() {
             }`}
           />
         </div>
-        <div className="hidden md:flex">
-          <div className="hidden md:flex cursor-pointer text-black px-3 py-2 font-bold hover:text-yellow-400">
-            <Link href="/om-oss">Om Oss</Link>
-          </div>
-          <div className="hidden md:flex cursor-pointer text-black px-3 py-2 font-bold hover:text-yellow-400">
-            <Link href="/rea">Rea</Link>
-          </div>
-          <div className="hidden md:flex cursor-pointer text-black px-3 py-2 font-bold hover:text-yellow-400">
-            <Link href="/shoppa-nu">Shoppa loss</Link>
-          </div>
+        <div className="hidden md:flex cursor-pointer text-black px-3 py-2 font-bold hover:text-yellow-400">
+          <Link href="/dam">Dam</Link>
         </div>
+        <div className="hidden md:flex cursor-pointer text-black px-3 py-2 font-bold hover:text-yellow-400">
+          <Link href="/herr">Herr</Link>
+        </div>
+        <div className="hidden md:flex cursor-pointer text-black px-3 py-2 font-bold hover:text-yellow-400">
+          <Link href="/outlet">Outlet</Link>
+        </div>
+
+        <div className="hidden md:flex cursor-pointer text-black px-3 py-2 font-bold hover:text-yellow-400">
+          <Link href="/kontakta-oss">Kontakta oss</Link>
+        </div>
+      </div>
+      <div className="hidden md:flex">
         <div className="hidden md:flex items-center">
           <Link href="/">
             <a className="px-3">
@@ -182,7 +196,7 @@ export default function Navbar() {
               </svg>
             </a>
           </Link>
-          <Link href="/profil">
+          {/*  <Link href="/profil">
             <a className="px-3 ">
               <svg
                 className="hidden md:flex cursor-pointer h-8 w-8 "
@@ -196,7 +210,7 @@ export default function Navbar() {
                 <path d="M12 6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0 9c2.7 0 5.8 1.29 6 2v1H6v-.99c.2-.72 3.3-2.01 6-2.01m0-11C9.79 4 8 5.79 8 8s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 9c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4z" />
               </svg>
             </a>
-          </Link>
+          </Link> */}
           <Link href="/my-cart">
             <a className="px-3">
               <svg

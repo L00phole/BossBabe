@@ -1,9 +1,9 @@
 import wp from "../lib/wp/wp";
-
-export default async function getRecommendedProducts() {
-  const data = await wp(`
+export default async function getDamKlader() {
+  const { data } = await wp(`
 query NewQuery {
-  productCategory(id: "rekommenderas", idType: SLUG) {
+  productCategory(id: "dam", idType: SLUG) {
+    id
     products {
       nodes {
         id
@@ -21,7 +21,8 @@ query NewQuery {
     }
   }
 }
-`);
 
-  return data.data.productCategory.products.nodes;
+`);
+  console.log(data);
+  return data.productCategory.products.nodes;
 }
