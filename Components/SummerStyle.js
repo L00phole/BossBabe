@@ -17,7 +17,7 @@ const Summer = () => {
                 </p>
                 <div className="flex justify-center">
                   <a
-                    href="#"
+                    href="herr"
                     className=" mt-10 inline-block bg-slate-800 border border-transparent rounded-md py-3 px-8 font-medium text-white"
                   >
                     Läs mer här..
@@ -46,7 +46,7 @@ const Summer = () => {
                   Hoppa in och titta på våra nyheter
                 </p>
                 <a
-                  href="#"
+                  href="herr"
                   className="mt-10 inline-block bg-slate-800 border border-transparent rounded-md py-3 px-8 font-medium text-white md:hover:bg-slate-600"
                 >
                   Läs mer här..
