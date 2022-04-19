@@ -102,7 +102,7 @@ function MobileNav({ open, setOpen }) {
             <p>Profil</p>
           </a>
         </Link> */}
-        <Link href="/min-kundkorg">
+        <Link href="/my-cart">
           <a className=" cursor-pointer flex space-x-[5px] items-center text-lg text-black font-bold pb-2">
             <svg
               className="cursor-pointer h-7 w-7"
@@ -211,7 +211,7 @@ export default function Navbar() {
               </svg>
             </a>
           </Link> */}
-          <Link href="/min-kundkorg">
+          <Link href="/my-cart">
             <a className="px-3">
               <svg
                 className="hidden md:flex cursor-pointer  h-7 w-7"
