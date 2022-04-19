@@ -1,6 +1,7 @@
 import useMediaQuery from "./UseState";
 import { useState, useEffect } from "react";
 import React, { useCallback } from "react";
+import Link from "next/link";
 
 const Footer = () => {
   const isBreakpoint = useMediaQuery(768);
@@ -47,10 +48,47 @@ const Footer = () => {
                 <FooterThingy label="Följ oss">
                   {" "}
                   <ul>
-                    <li className="mb-3">Facebook</li>
-                    <li className="mb-3">Instagram</li>
-                    <li className="mb-3">TikTok</li>
-                    <li className="mb-3">YouTube</li>
+                    <li className="mb-3 ">
+                      <a
+                        href="https://facebook.com"
+                        className="cursor-pointer"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Facebook
+                      </a>
+                    </li>
+                    <li className="mb-3 ">
+                      <a
+                        href="https://instagram.com"
+                        className="cursor-pointer"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Instagram
+                      </a>
+                    </li>
+                    <li className="mb-3 ">
+                      <a
+                        href="https://tiktok.com"
+                        className="cursor-pointer"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        TikTok
+                      </a>
+                    </li>
+
+                    <li className="mb-3 ">
+                      <a
+                        href="https://youtube.com"
+                        className="cursor-pointer"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        YouTube
+                      </a>
+                    </li>
                   </ul>
                 </FooterThingy>
               </div>
@@ -81,7 +119,7 @@ const Footer = () => {
             <div className="grid grid-cols-4  pb-10">
               <div className="grid justify-center text-lg">
                 <div>
-                  <h2 className="hover:text-2xl text-xl pb-4 font-bold">
+                  <h2 className="hover:text-2xl cursor-pointer text-xl pb-4 font-bold">
                     Shopping
                   </h2>
                 </div>
@@ -90,20 +128,24 @@ const Footer = () => {
                   <ul>
                     <li className="mb-3">Nyheter</li>
                     <li className="mb-3">Bästsäljare</li>
-                    <li className="mb-3">Outlet</li>
+                    <Link href="outlet">
+                      <li className="pb-3 cursor-pointer">Outlet</li>
+                    </Link>
                     <li className="mb-3">Alla produkter</li>
                   </ul>
                 </div>
               </div>
               <div className="grid justify-center  text-lg">
                 <div>
-                  <h2 className="pb-4 hover:text-2xl text-xl  font-bold">
+                  <h2 className="pb-4 cursor-pointer hover:text-2xl text-xl  font-bold">
                     Information
                   </h2>
                 </div>
                 <div>
                   <ul className="grid justify-center">
-                    <li className="mb-3">Om oss</li>
+                    <Link href="kontakta-oss">
+                      <li className="pb-3 cursor-pointer">Om oss</li>
+                    </Link>
                     <li className="mb-3">Karriär</li>
                     <li className="mb-3">Press</li>
                     <li className="mb-3">Cookie policy</li>
@@ -112,7 +154,7 @@ const Footer = () => {
               </div>
               <div className="grid justify-center  text-lg">
                 <div>
-                  <h2 className="pb-4 hover:text-2xl text-xl  font-bold">
+                  <h2 className="pb-4 cursor-pointer hover:text-2xl text-xl  font-bold">
                     Kundservice
                   </h2>
                 </div>
@@ -121,22 +163,59 @@ const Footer = () => {
                     <li className="pb-3">Hjälp</li>
                     <li className="pb-3">Hitta butik</li>
                     <li className="pb-3">Sekretess och säkerhet</li>
-                    <li className="pb-3">Kontakta oss</li>
+                    <Link href="kontakta-oss">
+                      <li className="pb-3 cursor-pointer">Kontakta oss</li>
+                    </Link>
                   </ul>
                 </div>
               </div>
               <div className="grid justify-center text-lg">
                 <div>
-                  <h2 className="pb-4 hover:text-2xl text-xl  font-bold ">
+                  <h2 className="pb-4 cursor-pointer hover:text-2xl text-xl  font-bold ">
                     Följ oss
                   </h2>
-                </div>
-                <div>
                   <ul>
-                    <li className="mb-3">Facebook</li>
-                    <li className="mb-3">Instagram</li>
-                    <li className="mb-3">TikTok</li>
-                    <li className="mb-3">YouTube</li>
+                    <li className="mb-3 ">
+                      <a
+                        href="https://facebook.com"
+                        className="cursor-pointer"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Facebook
+                      </a>
+                    </li>
+                    <li className="mb-3 ">
+                      <a
+                        href="https://instagram.com"
+                        className="cursor-pointer"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Instagram
+                      </a>
+                    </li>
+                    <li className="mb-3 ">
+                      <a
+                        href="https://tiktok.com"
+                        className="cursor-pointer"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        TikTok
+                      </a>
+                    </li>
+
+                    <li className="mb-3 ">
+                      <a
+                        href="https://youtube.com"
+                        className="cursor-pointer"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        YouTube
+                      </a>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -148,7 +227,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Powered by Jennie och Michele{" "}
+                Powered by Jennie och Michele
               </a>
             </div>
           </div>
