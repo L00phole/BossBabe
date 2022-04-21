@@ -12,13 +12,13 @@ const Summer = () => {
                 <h1 className="text-4xl font font-extrabold tracking-tight text-gray-900 sm:text-6xl">
                   Sommarens mode är äntligen här!
                 </h1>
-                <p className="mt-4 text-xl text-gray-500">
+                <p className="mt-4 text-xl ">
                   Hoppa in och titta på våra nyheter
                 </p>
                 <div className="flex justify-center">
                   <a
                     href="herr"
-                    className=" mt-10 inline-block bg-slate-800 border border-transparent rounded-md py-3 px-8 font-medium text-white"
+                    className=" mt-10 inline-block bg-slate-800 border border-transparent rounded-md py-3 px-8 font-medium "
                   >
                     Läs mer här..
                   </a>
@@ -39,15 +39,15 @@ const Summer = () => {
           <div className=" pt-10">
             <div className="grid md:grid-cols-2 grid-cols-1 items-center relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
               <div className="sm:max-w-lg">
-                <h1 className="text-4xl font font-extrabold tracking-tight text-gray-900 sm:text-6xl">
+                <h1 className="text-4xl font font-extrabold tracking-tight  sm:text-6xl">
                   Sommarens mode är äntligen här!
                 </h1>
-                <p className="mt-4 text-xl text-gray-500">
+                <p className="mt-4 text-xl ">
                   Hoppa in och titta på våra nyheter
                 </p>
                 <a
                   href="herr"
-                  className="mt-10 inline-block bg-slate-800 border border-transparent rounded-md py-3 px-8 font-medium text-white md:hover:bg-slate-600"
+                  className="mt-10 inline-block text-white bg-slate-800 border border-transparent rounded-md py-3 px-8 font-medium  md:hover:bg-slate-600"
                 >
                   Läs mer här..
                 </a>

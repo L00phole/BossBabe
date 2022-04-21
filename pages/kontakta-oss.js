@@ -14,9 +14,7 @@ export default function AboutUs() {
 
           <div className="flex max-w-xl mb-20 md:mb-0 ">
             <a>
-              <span className="text-3xl font-bold text-slate-800">
-                Michele{" "}
-              </span>
+              <span className="text-3xl font-bold ">Michele </span>
               <span className="text-3xl font-bold text-yellow-400">
                 Törnqvist
               </span>
@@ -41,7 +39,7 @@ export default function AboutUs() {
           </div>
           <div className=" max-w-xl mb-20 md:mb-0">
             <a>
-              <span className="text-3xl font-bold text-slate-800">Jennie </span>
+              <span className="text-3xl font-bold ">Jennie </span>
               <span className="text-3xl font-bold text-yellow-400">
                 Werther
               </span>
@@ -66,9 +64,7 @@ export default function AboutUs() {
           <Image src={profileUs} layout="fill" objectFit="cover" />
         </div>
         <div>
-          <span className=" text-2xl md:text-3xl font-bold text-slate-800">
-            Två{" "}
-          </span>
+          <span className=" text-2xl md:text-3xl font-bold ">Två </span>
           <span className="text-2xl md:text-3xl font-bold text-yellow-400">
             tösabitar..
           </span>

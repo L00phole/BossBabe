@@ -1,8 +1,40 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
+import { useTheme } from "next-themes";
+import { MoonIcon, SunIcon } from "@heroicons/react/solid";
 
 function MobileNav({ open, setOpen }) {
+  const { systemTheme, theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const renderThemeChanger = () => {
+    if (!mounted) return null;
+
+    const currentTheme = theme === "system" ? "light" : theme;
+
+    if (currentTheme === "dark") {
+      return (
+        <SunIcon
+          className=" w-7 h-7"
+          role="button"
+          onClick={() => setTheme("light")}
+        />
+      );
+    } else {
+      return (
+        <MoonIcon
+          className="w-7 h-7"
+          role="button"
+          onClick={() => setTheme("dark")}
+        />
+      );
+    }
+  };
   const handleMenuOpen = () => {
     let timeout;
     timeout = setTimeout(() => {
@@ -12,60 +44,57 @@ function MobileNav({ open, setOpen }) {
   };
   return (
     <div
-      className={`fixed md:hidden absolute top-0 left-0  pb-[30px] w-screen bg-white transform ${
+      className={`fixed md:hidden mt-[20px]  absolute top-0 left-0 bg-slate-800 pb-[30px] w-screen transform ${
         open ? "-translate-x-0" : "-translate-x-full"
       } transition-transform duration-300 ease-in-out filter drop-shadow-md `}
     >
-      <div className=" fixed w-full flex items-center justify-center filter drop-shadow-md bg-white h-20">
-        <h1 className=" cursor-pointer">
-          <Link href="/">
-            <a>
-              <span className="text-3xl font-bold text-slate-800">BOSS</span>
-              <span className="text-3xl font-bold text-yellow-400">BABE</span>
-            </a>
-          </Link>
-        </h1>
+      <div className="w-full filter drop-shadow-md  ml-4 ">
+        <Link href="/" className="cursor-pointer">
+          <a>
+            <span className="text-3xl font-bold text-white ">BOSS</span>
+            <span className="text-3xl font-bold text-yellow-400">BABE</span>
+          </a>
+        </Link>
       </div>
-      <div className="mt-24 flex flex-col ml-4">
+
+      <div className="mt-6 flex flex-col ml-4">
         <Link
-          className="text-xl font-medium my-4 hover:text-yellow-400"
+          className="text-xl font-medium my-4 "
           href="/dam"
           onClick={() => handleMenuOpen()}
         >
-          <a className="cursor-pointer text-lg text-black font-bold pb-2">
-            Dam
-          </a>
+          <a className="cursor-pointer text-lg  font-bold pb-2">Dam</a>
         </Link>
         <Link
-          className="text-xl font-medium my-4 hover:text-yellow-400"
+          className="text-xl font-medium my-4 "
           href="/herr"
           onClick={() => handleMenuOpen()}
         >
-          <a className="cursor-pointer text-lg text-black font-bold pb-2">
-            Herr
-          </a>
+          <a className="cursor-pointer text-lg  font-bold pb-2">Herr</a>
         </Link>
         <Link
-          className="text-xl font-medium my-4 hover:text-yellow-400"
+          className="text-xl font-medium my-4 "
           href="/outlet"
           onClick={() => handleMenuOpen()}
         >
-          <a className="cursor-pointer text-lg text-black font-bold pb-2">
-            Outlet
-          </a>
+          <a className="cursor-pointer text-lg font-bold pb-2">Outlet</a>
         </Link>
-
         <Link
-          className=" mt-3 text-xl font-medium my-4 hover:text-yellow-400"
+          className=" mt-3 text-xl font-medium my-4 "
           href="/kontakta-oss"
           onClick={() => handleMenuOpen()}
         >
-          <a className="cursor-pointer text-lg text-black font-bold pb-2">
-            Kontakta oss
-          </a>
+          <a className="cursor-pointer text-lg  font-bold pb-2">Kontakta oss</a>
         </Link>
-        <Link href="/">
-          <a className="pt-3 cursor-pointer flex space-x-[5px] items-center text-lg text-black font-bold pb-2">
+        <div className="flex gap-2">
+          <a className="cursor-pointer text-lg  font-bold pb-2">
+            Ändra till ljust/mörkt läge
+          </a>
+          {renderThemeChanger()}
+        </div>
+
+        {/*  <Link href="/">
+          <a className="pt-3 cursor-pointer flex space-x-[5px] items-center text-lg  font-bold pb-2">
             <svg
               className=" h-6 w-6 "
               xmlns="http://www.w3.org/2000/svg"
@@ -84,8 +113,7 @@ function MobileNav({ open, setOpen }) {
             </svg>
             <p>Ändra till mörk-/ljustläge</p>
           </a>
-        </Link>
-
+        </Link> */}
         {/* <Link href="/profil">
           <a className="cursor-pointer flex space-x-[5px] items-center text-lg text-black font-bold pb-2">
             <svg
@@ -103,7 +131,8 @@ function MobileNav({ open, setOpen }) {
           </a>
         </Link> */}
         <Link href="/min-kundkorg">
-          <a className=" cursor-pointer flex space-x-[5px] items-center text-lg text-black font-bold pb-2">
+          <a className=" cursor-pointer flex gap-2 items-center text-lg  font-bold pb-2">
+            <p>Min kundkorg</p>
             <svg
               className="cursor-pointer h-7 w-7"
               xmlns="http://www.w3.org/2000/svg"
@@ -111,14 +140,13 @@ function MobileNav({ open, setOpen }) {
               height="24px"
               viewBox="0 0 24 24"
               width="24px"
-              fill="#000000"
+              fill="#ffffff"
             >
               <g>
                 <rect fill="none" height="24" width="24" />
                 <path d="M18,6h-2c0-2.21-1.79-4-4-4S8,3.79,8,6H6C4.9,6,4,6.9,4,8v12c0,1.1,0.9,2,2,2h12c1.1,0,2-0.9,2-2V8C20,6.9,19.1,6,18,6z M12,4c1.1,0,2,0.9,2,2h-4C10,4.9,10.9,4,12,4z M18,20H6V8h2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V8h4v2c0,0.55,0.45,1,1,1s1-0.45,1-1V8 h2V20z" />
               </g>
             </svg>
-            <p>Min kundkorg</p>
           </a>
         </Link>
       </div>
@@ -128,13 +156,48 @@ function MobileNav({ open, setOpen }) {
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const { systemTheme, theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const renderThemeChanger = () => {
+    if (!mounted) return null;
+
+    const currentTheme = theme === "system" ? "light" : theme;
+
+    if (currentTheme === "dark") {
+      return (
+        <SunIcon
+          className=" w-7 h-7"
+          role="button"
+          onClick={() => setTheme("light")}
+        />
+      );
+    } else {
+      return (
+        <MoonIcon
+          className="w-7 h-7"
+          role="button"
+          onClick={() => setTheme("dark")}
+        />
+      );
+    }
+  };
+
   return (
-    <nav className="fixed z-50 fluid w-full flex justify-between filter drop-shadow-md bg-white px-4 py-4 h-20 ">
+    <nav
+      className={`${
+        theme === "light" ? "bg-white text-black" : "bg-slate-800 text-white"
+      } fixed z-50 fluid w-full text-white flex justify-between bg-slate-800 filter drop-shadow-md  px-4 py-4 h-20`}
+    >
       <MobileNav open={open} setOpen={setOpen} />
       <div className=" flex  items-center">
         <Link href="/">
           <a>
-            <span className="text-3xl font-bold text-slate-800 ">BOSS</span>
+            <span className="text-3xl font-bold text-white ">BOSS</span>
             <span className="text-3xl font-bold text-yellow-400">BABE</span>
           </a>
         </Link>
@@ -145,38 +208,40 @@ export default function Navbar() {
           onClick={() => setOpen(!open)}
         >
           <span
-            className={`h-1 w-full bg-black rounded-lg transform transition duration-300 ease-in-out ${
+            className={`h-1 w-full bg-white rounded-lg transform transition duration-300 ease-in-out ${
               open ? "rotate-45 translate-y-3.5" : ""
             }`}
           />
           <span
-            className={`h-1 w-full bg-black rounded-lg transition-all duration-300 ease-in-out ${
+            className={`h-1 w-full bg-white rounded-lg transition-all duration-300 ease-in-out ${
               open ? "w-0" : "w-full"
             }`}
           />
           <span
-            className={`h-1 w-full bg-black rounded-lg transform transition duration-300 ease-in-out ${
+            className={`h-1 w-full bg-white rounded-lg transform transition duration-300 ease-in-out ${
               open ? "-rotate-45 -translate-y-3.5" : ""
             }`}
           />
         </div>
-        <div className="hidden md:flex cursor-pointer text-black px-3 py-2 font-bold hover:text-yellow-400">
+        <div className="hidden md:flex cursor-pointer text-white px-3 py-2 font-bold hover:text-yellow-400">
           <Link href="/dam">Dam</Link>
         </div>
-        <div className="hidden md:flex cursor-pointer text-black px-3 py-2 font-bold hover:text-yellow-400">
+        <div className="hidden md:flex cursor-pointer text-white  px-3 py-2 font-bold hover:text-yellow-400">
           <Link href="/herr">Herr</Link>
         </div>
-        <div className="hidden md:flex cursor-pointer text-black px-3 py-2 font-bold hover:text-yellow-400">
+        <div className="hidden md:flex cursor-pointer text-white px-3 py-2 font-bold hover:text-yellow-400">
           <Link href="/outlet">Outlet</Link>
         </div>
 
-        <div className="hidden md:flex cursor-pointer text-black px-3 py-2 font-bold hover:text-yellow-400">
+        <div className="hidden md:flex cursor-pointer text-white px-3 py-2 font-bold hover:text-yellow-400">
           <Link href="/kontakta-oss">Kontakta oss</Link>
         </div>
       </div>
-      <div className="hidden md:flex">
+      <div className="hidden md:flex  text-white ">
         <div className="hidden md:flex items-center">
-          <Link href="/">
+          {renderThemeChanger()}
+
+          {/* <Link href="/">
             <a className="px-3">
               <svg
                 className="hidden md:flex  cursor-pointer  h-6 w-6 "
@@ -195,7 +260,7 @@ export default function Navbar() {
                 </g>
               </svg>
             </a>
-          </Link>
+          </Link> */}
           {/*  <Link href="/profil">
             <a className="px-3 ">
               <svg
@@ -212,7 +277,7 @@ export default function Navbar() {
             </a>
           </Link> */}
           <Link href="/min-kundkorg">
-            <a className="px-3">
+            <a className="px-3 ">
               <svg
                 className="hidden md:flex cursor-pointer  h-7 w-7"
                 xmlns="http://www.w3.org/2000/svg"
@@ -220,7 +285,7 @@ export default function Navbar() {
                 height="24px"
                 viewBox="0 0 24 24"
                 width="24px"
-                fill="#000000"
+                fill="#ffffff"
               >
                 <g>
                   <rect fill="none" height="24" width="24" />
