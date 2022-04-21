@@ -11,6 +11,7 @@ query NewQuery {
           altText
           mediaItemUrl
         }
+        slug
         name
         ... on SimpleProduct {
           id
@@ -23,6 +24,5 @@ query NewQuery {
 }
 
 `);
-  console.log(data);
   return data.productCategory.products.nodes;
 }

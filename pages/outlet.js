@@ -45,6 +45,5 @@ export default function outlet({ products }) {
 }
 export async function getStaticProps() {
   const products = await getOutlet();
-  console.log(products);
   return { props: { products } };
 }

@@ -16,6 +16,7 @@ export default async function getDetailPage(slug) {
     attributes {
       nodes {
         options
+        label
       }
     }
     galleryImages {
@@ -23,6 +24,7 @@ export default async function getDetailPage(slug) {
         altText
         id
         mediaItemUrl
+       
       }
     }
     ... on SimpleProduct {
@@ -37,6 +39,5 @@ export default async function getDetailPage(slug) {
   `,
     { slug }
   );
-  console.log(data);
-  return data.data.product.id;
+  return data.data.product;
 }

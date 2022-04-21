@@ -23,6 +23,5 @@ query NewQuery {
 }
 
 `);
-  console.log(data);
   return data.productCategory.products.nodes;
 }

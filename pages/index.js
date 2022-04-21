@@ -6,7 +6,6 @@ import wp from "../lib/wp/wp.js";
 import getRecommendedProducts from "../Components/getRecommendedProducts";
 
 export default function Home({ products }) {
-  console.log(products);
   const image =
     "https://images.unsplash.com/photo-1574680088814-c9e8a10d8a4d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80";
   const obj = {
@@ -36,6 +35,5 @@ export default function Home({ products }) {
 }
 export async function getStaticProps() {
   const products = await getRecommendedProducts();
-  console.log(products);
   return { props: { products } };
 }
