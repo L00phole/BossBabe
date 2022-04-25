@@ -3,17 +3,18 @@ import getDetaljSida from "./../../Components/getDetaljSida";
 import Image from "next/image";
 import { useState } from "react";
 import { StarIcon } from "@heroicons/react/solid";
-import { RadioGroup } from "@headlessui/react";
 
 const Products = ({ product }) => {
   console.log(product);
-  const [selectedColor, setSelectedColor] = useState(
+  /*   const [selectedColor, setSelectedColor] = useState(
     product.attributes.nodes[0].options
   );
   const [selectedSize, setSelectedSize] = useState(
     product.attributes.nodes[1].options
-  );
+  ); */
   const reviews = { href: "#", average: 4, totalCount: 117 };
+
+  const [selectColor, setSelectedColor] = useState(false);
 
   function classNames(...classes) {
     return classes.filter(Boolean).join(" ");
@@ -25,6 +26,26 @@ const Products = ({ product }) => {
   //     };
   //   });
   // }
+  function returnColor(color) {
+    switch (color) {
+      case "vit":
+        return "white";
+      case "svart":
+        return "black";
+      case "rosa":
+        return "#FF00CC";
+      case "lila":
+        return "#9933CC";
+      case "green":
+        "green";
+      case "blå":
+        return "blue";
+      case "grå":
+        return "grey";
+      case "mörkgrå":
+        return "#474747";
+    }
+  }
 
   return (
     <div className="mt-96 mb-96">
@@ -111,9 +132,32 @@ const Products = ({ product }) => {
               </div>
             </div>
 
-            <form className="mt-10">
+            <div className="mt-10">
               {/* Colors */}
-              <div>
+              <div className="flex gap-2">
+                {product?.attributes?.nodes[0].options.map((atr) => {
+                  console.log("attributes", atr);
+                  return (
+                    <button
+                      onClick={() => setSelectedColor(atr)}
+                      key={atr}
+                      className={` w-[60px] h-[60px] border-2  relative rounded-full ${
+                        selectColor === atr
+                          ? "border-black/50 dark:border-white"
+                          : "border-black/20 dark:border-white/20"
+                      }`}
+                    >
+                      <div
+                        style={{ backgroundColor: returnColor(atr) }}
+                        className={`absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 rounded-full  h-[50px] w-[50px] `}
+                      ></div>
+                    </button>
+                  );
+                })}
+              </div>
+              <div className="block relative pl-[35px] mb-[12px]  "></div>
+
+              {/* <div>
                 <h3 className="text-sm font-medium">Color</h3>
 
                 <RadioGroup
@@ -153,9 +197,9 @@ const Products = ({ product }) => {
                   </div>
                 </RadioGroup>
               </div>
-
+ */}
               {/* Sizes */}
-              <div className="mt-10">
+              {/*  <div className="mt-10">
                 <div className="flex items-center justify-between">
                   <h3 className="text-sm text-gray-900 font-medium">Size</h3>
                   <a
@@ -233,7 +277,7 @@ const Products = ({ product }) => {
                     ))}
                   </div>
                 </RadioGroup>
-              </div>
+              </div> */}
 
               <button
                 type="submit"
@@ -241,7 +285,7 @@ const Products = ({ product }) => {
               >
                 Add to bag
               </button>
-            </form>
+            </div>
           </div>
 
           <div className="py-10 lg:pt-6 lg:pb-16 lg:col-start-1 lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
