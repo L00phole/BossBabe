@@ -1,5 +1,6 @@
 import Image from "next/image";
 import getHerrKlader from "../Components/getHerrKlader";
+import Link from "next/Link";
 
 export default function herr({ products }) {
   return (
@@ -11,17 +12,19 @@ export default function herr({ products }) {
           {products?.map((product) => (
             <div key={product.id}>
               <div className="relative w-full min-w-[200px] md:min-w-[300px] h-[300px] md:h-[400px] bg-gray-200  rounded-md overflow-hidden hover:opacity-75">
-                <Image
-                  src={product.image.mediaItemUrl}
-                  alt={product.image.altText}
-                  layout="fill"
-                  objectFit="cover"
-                />
+                <Link href={`/product/${product.slug}`}>
+                  <Image
+                    src={product.image.mediaItemUrl}
+                    alt={product.image.altText}
+                    layout="fill"
+                    objectFit="cover"
+                  />
+                </Link>
               </div>
               <div className="mt-4 flex justify-between">
                 <div>
                   <h3 className="text-sm ">
-                    <a href="">{product.name}</a>
+                    <a href={`/product/${product.slug}`}>{product.name}</a>
                   </h3>
                   <p className="mt-1 text-sm ">{product.color}</p>
                 </div>
