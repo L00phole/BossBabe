@@ -12,7 +12,7 @@ export default function OutletExampel({ products }) {
         <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8 ">
           {products?.map((product) => (
             <div key={product.id}>
-              <div className="relative w-full min-w-[200px] md:min-w-[300px] h-[300px] md:h-[400px] bg-gray-200  rounded-md overflow-hidden hover:opacity-75">
+              <div className="relative w-full min-w-[200px] md:min-w-[300px] h-[300px] md:h-[400px] bg-gray-200 cursor-pointer rounded-md overflow-hidden hover:opacity-75">
                 <Link href={`/product/${product.slug}`}>
                   <Image
                     src={product.image.mediaItemUrl}

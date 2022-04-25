@@ -11,6 +11,7 @@ query NewQuery {
           altText
           mediaItemUrl
         }
+        slug
         name
         ... on SimpleProduct {
           id
