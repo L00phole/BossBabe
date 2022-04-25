@@ -6,7 +6,7 @@ export default async function getDetailPage(slug) {
  query NewQuery($slug: ID!) {
   product(id: $slug, idType: SLUG) {
     name
-    shortDescription
+    shortDescription(format: RAW)
     slug
     image {
       altText
