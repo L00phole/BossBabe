@@ -37,7 +37,7 @@ const Products = ({ product }) => {
       case "lila":
         return "#9933CC";
       case "grön":
-        "green";
+        return "green";
       case "blå":
         return "blue";
       case "grå":
