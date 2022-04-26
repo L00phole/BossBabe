@@ -52,50 +52,50 @@ const Products = ({ product }) => {
   }
 
   return (
-    <div className="mt-96 mb-96">
-      <div className="pt-6">
+    <div className=" mt-[70px]">
+      <div className="pt-6 ">
         <div className="mt-6 max-w-2xl mx-auto sm:px-6 lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-3 lg:gap-x-8">
-          <div className="relative hidden aspect-w-3 aspect-h-4 rounded-lg overflow-hidden lg:block">
+          <div className="hidden aspect-w-3 aspect-h-4 rounded-lg overflow-hidden lg:block">
             <Image
-              className=" 
-             w-full h-full object-center object-cover"
               src={product.galleryImages.nodes[2].mediaItemUrl}
               alt={product.image.altText}
               layout="fill"
               objectFit="cover"
+              className="w-full h-full object-center object-cover"
             />
           </div>
-
-          <div className=" lg:grid lg:grid-cols-1 lg:gap-y-8">
-            <div className="relative aspect-w-3 aspect-h-2 rounded-lg overflow-hidden">
+          <div className="hidden lg:grid lg:grid-cols-1 lg:gap-y-8">
+            <div className="aspect-w-3 aspect-h-2 rounded-lg overflow-hidden">
               <Image
-                className="w-full h-full object-center object-cover"
                 src={product.galleryImages.nodes[0].mediaItemUrl}
                 alt={product.image.altText}
                 layout="fill"
                 objectFit="cover"
+                className="w-full h-full object-center object-cover"
+              />
+            </div>
+            <div className="aspect-w-3 aspect-h-2 rounded-lg overflow-hidden">
+              <Image
+                src={product.galleryImages.nodes[1].mediaItemUrl}
+                alt={product.image.altText}
+                layout="fill"
+                objectFit="cover"
+                className="w-full h-full object-center object-cover"
               />
             </div>
           </div>
-          <div className="relative aspect-w-3 aspect-h-2 rounded-lg overflow-hidden">
+          <div className="aspect-w-4 aspect-h-5 sm:rounded-lg sm:overflow-hidden lg:aspect-w-3 lg:aspect-h-4">
             <Image
-              className="w-full h-full object-center object-cover"
-              src={product.galleryImages.nodes[1].mediaItemUrl}
-              alt={product.image.altText}
-              layout="fill"
-              objectFit="cover"
-            />
-          </div>
-          <div className="relative aspect-w-4 aspect-h-5 sm:rounded-lg sm:overflow-hidden lg:aspect-w-3 lg:aspect-h-4">
-            <Image
-              className="w-full h-full object-center object-cover"
               src={product.image.mediaItemUrl}
               alt={product.image.altText}
               layout="fill"
               objectFit="cover"
+              className="w-full h-full object-center object-cover"
             />
           </div>
         </div>
+
+        {/* Product info */}
         <div className="max-w-2xl mx-auto pt-10 pb-16 px-4 sm:px-6 lg:max-w-7xl lg:pt-16 lg:pb-24 lg:px-8 lg:grid lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8">
           <div className="lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
             <h1 className="text-2xl font-extrabold tracking-tight sm:text-3xl">
@@ -129,8 +129,8 @@ const Products = ({ product }) => {
                 <p className="sr-only">{reviews.average} utav 5 stjärnor</p>
                 <a
                   href={reviews.href}
-                  className="ml-3 text-sm font-medium text-indigo-600
-                  hover:text-indigo-500"
+                  className="ml-3 text-sm font-medium text-indigo-700 dark:text-sky-600 
+                  hover:text-indigo-400 dark:hover:text-sky-400"
                 >
                   {reviews.totalCount} recensioner
                 </a>
@@ -147,10 +147,10 @@ const Products = ({ product }) => {
                     <button
                       onClick={() => setSelectedColor(atrColor)}
                       key={atrColor}
-                      className={` w-[60px] h-[60px] border-2  relative rounded-full ${
+                      className={` w-[60px] h-[60px] border-4  relative rounded-full ${
                         selectColor === atrColor
                           ? "border-black/50 dark:border-white"
-                          : "border-black/20 dark:border-white/20"
+                          : "border-black/20 hover:border-zinc-400 dark:border-white/20 dark:hover:bg-teal-800"
                       }`}
                     >
                       <div
@@ -172,7 +172,7 @@ const Products = ({ product }) => {
                     <button
                       onClick={() => setSelectedSize(atrSize)}
                       key={atrSize}
-                      className={` w-[60px] h-[60px] border-2 font-bold text-slate-600 text-lg uppercase relative rounded-full dark:bg-slate-800 ${
+                      className={` w-[60px] h-[60px] border-4 font-bold hover:bg-zinc-200 text-slate-600 text-lg uppercase relative rounded-full dark:bg-slate-800/70 dark:hover:bg-teal-800 dark:text-white ${
                         selectSize === atrSize
                           ? "border-black/50 dark:border-white"
                           : "border-black/20 dark:border-white/20 "
@@ -187,7 +187,7 @@ const Products = ({ product }) => {
 
               <button
                 type="submit"
-                className="mt-10 w-full bg-indigo-600 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                className="mt-10 w-full bg-neutral-900 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-lg font-medium text-white tracking-wide hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-900 dark:bg-slate-800 dark:hover:bg-teal-800"
               >
                 Lägg i varukorgen
               </button>
@@ -200,7 +200,7 @@ const Products = ({ product }) => {
               <h3 className="sr-only">Beskrivning</h3>
 
               <div className="space-y-6">
-                <p className="text-base text-xl font-medium font-sans tracking-tight leading-relaxed w-4/5">
+                <p className="text-base text-xl md:font-medium font-sans tracking-normal leading-relaxed w-4/5 dark:text-white/80">
                   {product.shortDescription}
                 </p>
               </div>
@@ -212,7 +212,7 @@ const Products = ({ product }) => {
               </h2>
 
               <div className="mt-4 space-y-6">
-                <p className="text-lg font-normal tracking-tight leading-relaxed text-slate-600 italic dark:text-white w-11/12">
+                <p className="text-lg font-normal tracking-normal leading-relaxed text-slate-600 italic dark:text-white/80 w-11/12">
                   {product.shortDescription}
                 </p>
               </div>
