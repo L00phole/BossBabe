@@ -1,9 +1,9 @@
 import SummerStyle from "../Components/SummerStyle";
 import Rekommenderas from "../Components/Rekommenderas";
 import Kollektioner from "../Components/Kollektioner";
-import Image from "next/image";
-import wp from "../lib/wp/wp.js";
 import getRecommendedProducts from "../Components/getRecommendedProducts";
+import React from "react";
+import RCTypeWriting from "../Components/TypeWriter";
 
 export default function Home({ products }) {
   const image =
@@ -14,20 +14,15 @@ export default function Home({ products }) {
   };
 
   return (
-    <div className="mt-[80px] md:mt-[70px] ">
-      <div className=" relative h-[350px]  w-fill md:h-[600px] lg:h-[1000px] ">
-        {!obj?.image ? null : (
-          <Image
-            src={obj?.image}
-            alt="hero"
-            layout="fill"
-            objectFit="cover"
-            stylealt="header"
-          />
-        )}
+    <div className="mt-[70px] md:mt-[50px] ">
+      <div className=" aspect-w-16 aspect-h-9 display-none z-10 w-auto min-w-full min-h-full max-w-none">
+        <video autoPlay loop muted src={"./hero.mp4"} />
+        <div className="z-50 absolute grid text-white md:h-[50%] m-auto md:top-[550px] text-center md:w-[60%] md:text-6xl top-[250px] ">
+          <RCTypeWriting />
+        </div>
       </div>
-      <Rekommenderas products={products} />
 
+      <Rekommenderas products={products} />
       <SummerStyle />
       <Kollektioner />
     </div>
