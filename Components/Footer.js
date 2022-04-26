@@ -128,7 +128,7 @@ const Footer = () => {
                   <ul>
                     <li className="mb-3">Nyheter</li>
                     <li className="mb-3">Bästsäljare</li>
-                    <Link href="outlet">
+                    <Link href="outlet" passHref>
                       <li className="pb-3 cursor-pointer">Outlet</li>
                     </Link>
                     <li className="mb-3">Alla produkter</li>
@@ -143,7 +143,7 @@ const Footer = () => {
                 </div>
                 <div>
                   <ul className="grid justify-center">
-                    <Link href="kontakta-oss">
+                    <Link href="kontakta-oss" passHref>
                       <li className="pb-3 cursor-pointer">Om oss</li>
                     </Link>
                     <li className="mb-3">Karriär</li>
@@ -163,7 +163,7 @@ const Footer = () => {
                     <li className="pb-3">Hjälp</li>
                     <li className="pb-3">Hitta butik</li>
                     <li className="pb-3">Sekretess och säkerhet</li>
-                    <Link href="kontakta-oss">
+                    <Link href="kontakta-oss" passHref>
                       <li className="pb-3 cursor-pointer">Kontakta oss</li>
                     </Link>
                   </ul>
