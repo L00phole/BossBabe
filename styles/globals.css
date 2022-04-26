@@ -23,3 +23,6 @@ body {
     @apply text-white bg-blue-600;
   }
 }
+.will-change-transform {
+  will-change: transform;
+}
