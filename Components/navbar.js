@@ -44,7 +44,7 @@ function MobileNav({ open, setOpen }) {
   };
   return (
     <div
-      className={`fixed md:hidden mt-[20px]  absolute top-0 left-0 bg-slate-800 pb-[30px] w-screen transform ${
+      className={`fixed md:hidden mt-[20px]  absolute top-0 left-0 light:bg-slate-800 bg-slate-800 pb-[30px] w-screen transform ${
         open ? "-translate-x-0" : "-translate-x-full"
       } transition-transform duration-300 ease-in-out filter drop-shadow-md `}
     >
@@ -190,7 +190,9 @@ export default function Navbar() {
   return (
     <nav
       className={`${
-        theme === "light" ? "bg-white text-black" : "bg-slate-800 text-white"
+        theme === "light"
+          ? "bg-slate-800 text-black"
+          : "bg-slate-800 text-white"
       } fixed z-50 fluid w-full text-white flex justify-between bg-slate-800 filter drop-shadow-md  px-4 py-4 h-20`}
     >
       <MobileNav open={open} setOpen={setOpen} />

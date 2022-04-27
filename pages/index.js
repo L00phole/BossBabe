@@ -14,7 +14,7 @@ export default function Home({ products }) {
   };
 
   return (
-    <div className="mt-[70px] md:mt-[50px] ">
+    <div className="mt-[70px] md:mt-[40px] ">
       <div className=" aspect-w-16 aspect-h-9 display-none z-10 w-auto min-w-full min-h-full max-w-none">
         <video autoPlay loop muted src={"./hero.mp4"} />
         <div className="z-50 absolute grid text-white md:h-[50%] m-auto md:top-[550px] text-center md:w-[60%] md:text-6xl top-[250px] ">
