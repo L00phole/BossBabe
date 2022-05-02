@@ -15,7 +15,7 @@ const Footer = () => {
                 <h1 className="font-bold text-4xl ">
                   <span className="text-white">BOSS</span>
                   <span className="text-yellow-400">BABE</span>
-                </h1>{" "}
+                </h1>
                 <br />
                 <p className="font-bold text-lg -mt-5">Workout like a boss</p>
               </div>
@@ -29,7 +29,6 @@ const Footer = () => {
                   </ul>
                 </FooterThingy>
                 <FooterThingy label="Information">
-                  {" "}
                   <ul>
                     <li className="mb-3">Om oss</li>
                     <li className="mb-3">Karriär</li>
@@ -46,7 +45,6 @@ const Footer = () => {
                   </ul>
                 </FooterThingy>
                 <FooterThingy label="Följ oss">
-                  {" "}
                   <ul>
                     <li className="mb-3 ">
                       <a
@@ -99,7 +97,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Powered by Jennie och Michele{" "}
+                  Powered by Jennie och Michele
                 </a>
               </div>
             </div>
@@ -107,7 +105,7 @@ const Footer = () => {
         </div>
       ) : (
         <>
-          <div className="max-h-[400px] md:h-[400px] bg-slate-800 text-white py-5 sm:w-full">
+          <div className=" bg-slate-800 text-white py-5 sm:w-full">
             <div className="text-center  pb-10 ">
               <h1 className="font-bold text-4xl ">
                 <span className="text-white">BOSS</span>
@@ -116,7 +114,8 @@ const Footer = () => {
               <br />
               <p className="font-bold text-lg -mt-5">Workout like a boss</p>
             </div>
-            <div className="grid grid-cols-4  pb-10">
+            <div className="grid grid-cols-6  pb-10 ">
+              <div></div>
               <div className="grid justify-center text-lg">
                 <div>
                   <h2 className="hover:text-2xl cursor-pointer text-xl pb-4 font-bold">
@@ -219,6 +218,7 @@ const Footer = () => {
                   </ul>
                 </div>
               </div>
+              <div></div>
             </div>
 
             <div className="font-bold text-sm mb-0 text-center ">
