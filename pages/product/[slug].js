@@ -219,7 +219,7 @@ const Products = ({ product }) => {
 
               <div className="space-y-6">
                 <p className="text-base text-xl md:font-medium font-sans tracking-normal leading-relaxed w-4/5 dark:text-white/80">
-                  {product.shortDescription}
+                  {product.description}
                 </p>
               </div>
             </div>
@@ -229,10 +229,14 @@ const Products = ({ product }) => {
                 Detaljer
               </h2>
 
-              <div className="mt-4 space-y-6">
-                <p className="text-lg font-normal tracking-normal leading-relaxed text-slate-600 italic dark:text-white/80 w-11/12">
-                  {product.shortDescription}
-                </p>
+              <div className="mt-4 space-y-3 text-xl font-normal tracking-normal leading-relaxed text-slate-600  dark:text-white/80 w-11/12">
+                <p> {product.shortDescription.slice(0, 21)}</p>
+                <ul className="pl-6 list-disc text-lg italic">
+                  <li>{product.shortDescription.slice(21, 68)}</li>
+                  <li>{product.shortDescription.slice(68, 84)}</li>
+                  <li>{product.shortDescription.slice(86, 110)}</li>
+                  <li>{product.shortDescription.slice(112, 164)}</li>
+                </ul>
               </div>
             </div>
           </div>

@@ -33,7 +33,9 @@ export default async function getDetailPage(slug) {
       salePrice(format: RAW)
       name
       stockQuantity
+      description(format: RAW)
     }
+    
   }
 }, 
   `,
